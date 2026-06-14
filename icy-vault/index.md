@@ -48,6 +48,9 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 ## Ideas
 - [[AI-driven FEA CAE CFD]] - using AI / LLMs to drive engineering simulation.
 
+## Synthesis
+- [[Synthesis - One-Person-Company Stack]] - how Icy's threads converge on his north star.
+
 ## Health
 - [[Fitness Profile]] - stats and preferences.
 
