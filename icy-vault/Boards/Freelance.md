@@ -6,6 +6,9 @@ kanban-plugin: board
 
 ## 📥 Backlog
 
+- [ ] 🟡 **Define Icy Production packages and rates** · @2026-06-14
+	Photography and videography service tiers and pricing. [[Icy Production]]
+
 
 
 ## 📋 This Week

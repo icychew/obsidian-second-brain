@@ -14,6 +14,9 @@ kanban-plugin: board
 
 ## 🔨 In Progress
 
+- [ ] 🟡 **ACCA Foundation - clear paper 5** · @2026-06-14
+	Currently at the 5th paper. [[ACCA Foundation in Accountancy]]
+
 
 
 ## ⏳ Waiting On
