@@ -16,7 +16,7 @@ related-projects:
 # Smart EV Battery Pack
 
 ## For future Claude
-A 2024 mechanical-engineering project by [[Icy Chew Hao Yang]]: a redesigned EV car battery pack using a honeycomb-cell structure and a combined sodium-ion + lithium-ion configuration. Goal: reduce the risk of thermal runaway (self-burning) and add a crumple zone for crash safety. Entered the "Small By Match" competition (exact competition name TBD - confirm). Pull this for his EV / battery and mechanical-design work. Confidence: stated by Icy.
+A 2024 mechanical-engineering project by [[Icy Chew Hao Yang]]: a redesigned EV car battery pack using a honeycomb-cell structure and a combined sodium-ion + lithium-ion configuration. Goal: reduce the risk of thermal runaway (self-burning) and add a crumple zone for crash safety. Entered a competition run by Bimage, a Malaysian company. Pull this for his EV / battery and mechanical-design work. Confidence: stated by Icy.
 
 ## Overview
 - Redesign of an EV car battery pack.
@@ -28,10 +28,10 @@ A 2024 mechanical-engineering project by [[Icy Chew Hao Yang]]: a redesigned EV 
 - Provides a crumple zone to absorb energy when the EV is in an accident.
 
 ## Status
-- Completed in 2024. Entered the "Small By Match" competition (name TBD - confirm).
+- Completed in 2024. Entered the Bimage competition (Bimage is a Malaysian company).
 
 ## Open questions
-- Confirm the exact competition name and result.
+- Confirm the exact Bimage event name and result (and whether it is the same Bimage event as [[Smart City Bot]]).
 - Stack / tools (CAD, simulation), teammates, and any report or links: TBD.
 
 ## Recent Activity

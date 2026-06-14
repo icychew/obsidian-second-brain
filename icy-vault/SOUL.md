@@ -26,3 +26,4 @@ Identity file for the vault owner, Icy Chew Hao Yang. Read it first (L0) in ever
 - Focus / deep-work driven: when an idea hits, he grinds for hours straight.
 - Daytime is classes plus running societies and his side hustle, so his active build window is at night through midnight (current pattern as of 2026-06, last ~2 months).
 - Thinks from first principles - frame options and trade-offs explicitly rather than hand-waving.
+- Self-taught: he has no technical mentor. He learns independently and leverages AI heavily to make his projects happen - assume he wants to understand and build things himself, with AI as the force multiplier.

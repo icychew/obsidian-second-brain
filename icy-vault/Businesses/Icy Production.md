@@ -27,7 +27,7 @@ Icy Production is [[Icy Chew Hao Yang]]'s photography and videography services s
 
 ## Rates (as of 2026-06)
 - RM600 to RM800 per 2 to 3 hour event (photography / videography).
-- RM150 per hour for hourly work. The exact hourly service was unclear in conversation (possibly consultation or an hourly add-on) - confirm.
+- RM150 per hour for personal convocation (graduation) photography.
 
 ## Status
 - Active. Current clients and portfolio links: TBD - confirm.

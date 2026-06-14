@@ -13,20 +13,20 @@ related-projects:
   - "[[Coding Projects Index]]"
 ---
 
-# EVi - EV Troubleshooting Chatbot
+# EV Eye (EVi) - EV Troubleshooting Chatbot
 
 ## For future Claude
-A recent small-EV project by [[Icy Chew Hao Yang]]: a chatbot (possibly named "Cloud") that troubleshoots EV problems related to charger faults. Project and product naming is unconfirmed (EVi vs Cloud - confirm). Pull this for his applied-AI / EV-support work. Confidence: stated by Icy; names TBD.
+A recent small-EV project by [[Icy Chew Hao Yang]]: EV Eye (stylized EVi), a chatbot that troubleshoots EV problems related to charger faults. The source lives in a local folder named "small ev". Pull this for his applied-AI / EV-support work. Confidence: stated by Icy.
 
 ## Overview
-- Part of a small EV project.
+- Name: EV Eye (stylized EVi).
 - A chatbot that troubleshoots EV problems, focused on charger faults.
+- Part of a small EV project; source in the local folder `small ev`.
 
 ## Status
 - Active / recent.
 
 ## Open questions
-- Confirm the project and chatbot names (EVi, Cloud).
 - Model / stack, the data sources used for troubleshooting, and deployment: TBD.
 
 ## Recent Activity

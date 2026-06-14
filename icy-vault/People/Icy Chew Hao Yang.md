@@ -44,6 +44,7 @@ The owner of the vault - the person you work for. This is the full profile that 
 ## How we can help each other
 - He works at night - asynchronous, important-points-first communication suits him.
 - Frame decisions from first principles with explicit trade-offs.
+- He has no technical mentor and is fully self-taught, using AI as his main leverage - support that: explain the why, teach as you go, and help him build it himself.
 
 ## Notes
 - Education, work, and travel history: [[Timeline]].
