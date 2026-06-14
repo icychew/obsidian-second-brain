@@ -50,6 +50,7 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 
 ## Synthesis
 - [[Synthesis - One-Person-Company Stack]] - how Icy's threads converge on his north star.
+- [[Roadmap - 30-60-90 (from 2026-06-14)]] - sequenced 30/60/90-day action plan.
 
 ## Health
 - [[Fitness Profile]] - stats and preferences.
