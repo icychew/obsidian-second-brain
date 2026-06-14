@@ -22,7 +22,7 @@ An autonomous smart-parking robot by [[Icy Chew Hao Yang]]: it parks cars autono
 - Uses a scissor-lift mechanism to lift the car and park it.
 
 ## Result
-- 2nd runner-up at the Bimage competition (Bimage is a Malaysian company).
+- 2nd runner-up at the [[Bimage]] competition (Bimage is a Malaysian company).
 
 ## Status
 - Completed (competition project).

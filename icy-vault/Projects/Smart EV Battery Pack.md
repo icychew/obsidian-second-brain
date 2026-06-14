@@ -28,7 +28,7 @@ A 2024 mechanical-engineering project by [[Icy Chew Hao Yang]]: a redesigned EV 
 - Provides a crumple zone to absorb energy when the EV is in an accident.
 
 ## Status
-- Completed in 2024. Entered the Bimage competition (Bimage is a Malaysian company).
+- Completed in 2024. Entered the [[Bimage]] competition (Bimage is a Malaysian company).
 
 ## Open questions
 - Confirm the exact Bimage event name and result (and whether it is the same Bimage event as [[Smart City Bot]]).

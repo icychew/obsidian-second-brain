@@ -55,6 +55,13 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 - [[Icy Chew Hao Yang]] (owner)
 - [[Yew Jia Haur]] (YB collaborator)
 
+## Organizations
+- [[Universiti Malaya]] - his university.
+- [[Persatuan Fotografi Selangor dan KL]] - Photojam's parent society.
+- [[Bimage]] - Malaysian company, competition organizer.
+- [[Kuayue UM]] - UM club, released his single.
+- [[UM Dance Sport Club]] - MV dance collaborators.
+
 ## Jobs
 - [[Nildeco MY]] - 2022 digital marketing.
 - [[Early F&B Jobs]] - earliest work.
@@ -74,5 +81,5 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 
 ## Known gaps (to fill)
 - Per-project detail (stack, links, outcomes) and the rest of the projects in Icy's local folders: [[Coding Projects Index]].
-- People: band members and dance-sport collaborators (names TBD).
+- People: band members, dance-sport collaborators, project teammates, and clients - tracked in [[People to Add]].
 - Detailed finances and more day-to-day people - not yet captured.

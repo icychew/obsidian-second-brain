@@ -17,7 +17,7 @@ A music single titled 想你不只一天两天 that [[Icy Chew Hao Yang]] releas
 
 ## Overview
 - Title: 想你不只一天两天.
-- Released through the Kuayue UM (跨越 UM) club.
+- Released through the [[Kuayue UM]] (跨越 UM) club.
 - Available on all major music platforms (as of 2026; confidence: stated by Icy).
 
 ## Status

@@ -21,7 +21,7 @@ An original theme song and music video for [[Photojam]]. [[Icy Chew Hao Yang]] w
 ## Overview
 - Icy was band manager for an original Photojam theme song.
 - The band was formed from Universiti Malaya friends of different backgrounds.
-- The MV was made in collaboration with the UM Dance Sport club, who provided dancers and choreography.
+- The MV was made in collaboration with the [[UM Dance Sport Club]], who provided dancers and choreography.
 
 ## Status
 - Active as of 2026-06. Release status and links TBD - confirm whether the song and MV are publicly released and where.

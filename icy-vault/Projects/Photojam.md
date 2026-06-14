@@ -40,7 +40,7 @@ Photojam is the youth wing of Persatuan Fotografi Selangor dan KL (a photography
 - TBD - none recorded yet. Add directional decisions here as they happen.
 
 ## Links
-- Parent body: Persatuan Fotografi Selangor dan KL (no note yet).
+- Parent body: [[Persatuan Fotografi Selangor dan KL]].
 
 ## Recent Activity
 
