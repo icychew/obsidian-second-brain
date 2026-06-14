@@ -21,10 +21,16 @@ Icy Production is [[Icy Chew Hao Yang]]'s photography and videography services s
 - Operated by [[Icy Chew Hao Yang]] as a solo creative brand - aligned with his goal to [[Build a One-Person Company]].
 
 ## Services
-- Photography and videography (specific packages TBD).
+- Photography and videography packages.
+- Strong at and focused on portraits.
+- Also takes on passion projects.
+
+## Rates (as of 2026-06)
+- RM600 to RM800 per 2 to 3 hour event (photography / videography).
+- RM150 per hour for hourly work. The exact hourly service was unclear in conversation (possibly consultation or an hourly add-on) - confirm.
 
 ## Status
-- Active. Clients, pricing, and portfolio links: TBD - confirm.
+- Active. Current clients and portfolio links: TBD - confirm.
 
 ## Notes
 - This is the freelance / creative arm of Icy's income. Tracked on the [[Freelance]] board.

@@ -9,27 +9,30 @@ ai-first: true
 status: active
 related-people:
   - "[[Icy Chew Hao Yang]]"
+related-projects:
+  - "[[Smart EV Battery Pack]]"
+  - "[[Smart City Bot]]"
+  - "[[Pallet i]]"
+  - "[[EVi - EV Troubleshooting Chatbot]]"
 ---
 
 # Coding Projects Index
 
 ## For future Claude
-Placeholder index for [[Icy Chew Hao Yang]]'s hardware and software projects. Icy has done many coding and hardware projects (he builds and vibe codes with Claude), but the list was not captured in the onboarding session - he referred to his past Claude.ai chats and Google Drive documents, which were not accessible in that session. This note is a deliberate stub, not an empty record. Pull it to see what is still missing, and fill it once the projects are listed or retrieved.
+Index of [[Icy Chew Hao Yang]]'s hardware and software projects. He builds and vibe codes with Claude (see [[Vibe Coding with Claude]]). The four below were captured from Icy directly and each has its own note. There are likely more in his local document folders (see Source). Pull this to navigate his engineering and AI build work.
 
-## Status
-- TBD - projects not yet enumerated. This is a known gap.
+## Projects
+- [[Smart EV Battery Pack]] (2024) - honeycomb-cell EV battery pack, sodium-ion + lithium-ion config; safety-focused.
+- [[Smart City Bot]] - autonomous scissor-lift parking robot; 2nd runner-up.
+- [[Pallet i]] (2025, CREST) - AI pallet-monitoring robot with a Raspberry Pi camera.
+- [[EVi - EV Troubleshooting Chatbot]] - chatbot for EV charger-fault troubleshooting.
 
-## How to fill this in
-- Option A: Icy lists each project (name, one-line description, status, stack, repo or link) in chat.
-- Option B: grant Google Drive access so the project documents can be read and extracted.
-- Option C: paste chat exports, READMEs, or GitHub repo URLs.
+## Source (for local sessions)
+- More project files live on Icy's Windows machine under `C:\Users\User\Documents` and `C:\Users\User`. These are not reachable from a remote session - when running the skill locally, scan those folders to ingest the rest.
 
-## Projects (to be filled)
-- TBD
-
-## Related
-- Practice and method: [[Vibe Coding with Claude]].
-- Degree context: [[Mechanical Engineering at Universiti Malaya]].
+## Still to add
+- Any projects not yet listed from the folders above.
+- Per-project detail: stack, repos / links, teammates, and outcomes (several are TBD in the individual notes).
 
 ## Recent Activity
 

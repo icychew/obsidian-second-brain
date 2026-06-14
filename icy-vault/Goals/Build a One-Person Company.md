@@ -24,6 +24,9 @@ Icy's north-star goal: build a one-person company - a solo-run business he owns 
 ## What "done" looks like
 - A sustainable business he runs solo (with AI leverage) generating meaningful income. Concrete success metric: TBD - define a revenue or milestone target with Icy.
 
+## Near-term priority
+- Start generating revenue now - use AI to turn a profit as soon as possible, rather than waiting for a distant launch. Money-making starts from today (as of 2026-06).
+
 ## Milestones
 - TBD - break this into 6 to 12 month milestones.
 

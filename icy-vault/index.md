@@ -19,7 +19,9 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 
 ## Goals
 - [[Build a One-Person Company]] - north star.
+- [[Work at a Multinational Engineer]] - career goal (around 2029).
 - [[Photojam Book 1000 Copies]] - book fundraising goal.
+- [[Return to Optimum Weight]] - health goal.
 
 ## Projects
 - [[Photojam]] - community and creative program (umbrella):
@@ -29,7 +31,11 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
   - [[Camera Brand Workshops]]
 - [[Kuayue UM Single - 想你不只一天两天]] - released music single.
 - [[Elementum]] - periodic-table game (2023).
-- [[Coding Projects Index]] - hardware and software projects (TBD, to be filled).
+- [[Coding Projects Index]] - hardware and software projects:
+  - [[Smart EV Battery Pack]]
+  - [[Smart City Bot]]
+  - [[Pallet i]]
+  - [[EVi - EV Troubleshooting Chatbot]]
 
 ## Businesses
 - [[Icy Production]] - photography and videography side hustle.
@@ -38,6 +44,12 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 - [[Mechanical Engineering at Universiti Malaya]]
 - [[ACCA Foundation in Accountancy]]
 - [[Vibe Coding with Claude]]
+
+## Ideas
+- [[AI-driven FEA CAE CFD]] - using AI / LLMs to drive engineering simulation.
+
+## Health
+- [[Fitness Profile]] - stats and preferences.
 
 ## People
 - [[Icy Chew Hao Yang]] (owner)
@@ -61,6 +73,6 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 - [[Income Streams]] - how Icy makes money.
 
 ## Known gaps (to fill)
-- Coding and hardware projects: [[Coding Projects Index]].
+- Per-project detail (stack, links, outcomes) and the rest of the projects in Icy's local folders: [[Coding Projects Index]].
 - People: band members and dance-sport collaborators (names TBD).
-- Health, detailed finances, and more goals - not yet captured.
+- Detailed finances and more day-to-day people - not yet captured.

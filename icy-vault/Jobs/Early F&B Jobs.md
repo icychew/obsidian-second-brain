@@ -12,17 +12,14 @@ related-people:
 # Early F&B Jobs
 
 ## For future Claude
-Icy's earliest work experience: food-and-beverage service jobs while very young. He listed "12 You & Me Western Food" and "13 and 14 Long Kee Seafood" - read here as his ages at each job (confidence: medium - ages inferred from how he listed them; confirm with Icy). Pull this for his earliest work history and work ethic.
+Icy's earliest work experience: food-and-beverage service jobs while very young. He confirmed that 12, 13, and 14 are his ages at these jobs (confidence: stated). Pull this for his earliest work history and work ethic.
 
 ## Roles
-- You & Me Western Food restaurant - waiter, dishwasher, and beverage preparation. Around age 12 (confidence: medium - confirm).
-- Long Kee Seafood - waiter. Around ages 13 to 14 (confidence: medium - confirm).
+- You & Me Western Food restaurant - waiter, dishwasher, and beverage preparation. Age 12 (confirmed).
+- Long Kee Seafood - waiter. Ages 13 to 14 (confirmed).
 
 ## Why it matters
 - Shows an early, hands-on work ethic well before his ventures and studies.
-
-## Notes
-- Confirm whether "12" and "13 and 14" are his ages or calendar years.
 
 ## Recent Activity
 

@@ -30,6 +30,7 @@ The owner of the vault - the person you work for. This is the full profile that 
 - Building a one-person company as his north-star goal. See [[Build a One-Person Company]].
 - Community and creative leadership through Photojam, the youth wing of Persatuan Fotografi Selangor dan KL. See [[Photojam]].
 - Giving back and making things easier for others. See [[CORE_VALUES]].
+- Building toward AI-driven engineering simulation (FEA / CAE / CFD) and, after graduating, a multinational engineer role. See [[AI-driven FEA CAE CFD]] and [[Work at a Multinational Engineer]].
 
 ## Track record
 - Chief Editor and publisher lead for the Photojam book ([[Photojam Book]]), released 2026-03-01; 300+ of a 1000-copy / 5-year goal sold so far.
@@ -38,6 +39,7 @@ The owner of the vault - the person you work for. This is the full profile that 
 - Camera-brand workshops with Fujifilm, Sony, and Nikon ([[Camera Brand Workshops]]).
 - Released a single, 想你不只一天两天, through the Kuayue UM club on major music platforms ([[Kuayue UM Single - 想你不只一天两天]]).
 - Earlier: digital marketing at Nildeco MY (2022, see [[Nildeco MY]]); the Elementum periodic-table game at matrikulasi (2023, see [[Elementum]]).
+- Engineering and AI builds: [[Smart EV Battery Pack]], [[Smart City Bot]] (2nd runner-up), [[Pallet i]] (CREST), and [[EVi - EV Troubleshooting Chatbot]]. See [[Coding Projects Index]].
 
 ## How we can help each other
 - He works at night - asynchronous, important-points-first communication suits him.
