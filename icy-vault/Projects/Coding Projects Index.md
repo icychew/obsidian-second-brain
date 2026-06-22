@@ -25,6 +25,7 @@ Index of [[Icy Chew Hao Yang]]'s hardware and software projects. He builds and v
 - [[Smart EV Battery Pack]] (2024) - Li-Na hybrid honeycomb EV battery pack in SOLIDWORKS; 2nd Runner-Up (Bimage x IMechE UM PDMC).
 - [[Pallet i]] (PalletEye, 2025) - AI pallet-monitoring robot; Champion at CREST 2025 & i-UM Disrupt 2025.
 - [[EVi - EV Troubleshooting Chatbot]] (EV Eye) - full-stack AI EV-charger troubleshooting; ESUM x RExharge.
+- [[VibeFit]] - fitness web app (details and URL TBD).
 - [[Smart City Bot]] - autonomous scissor-lift parking robot (Smart City Solution Competition, IMechE UM).
 - [[Automated Lock and Mechanism Design]] - solenoid RFID locks (C++/Arduino) + 3D-printed mechanisms.
 - [[ROS2 Robotic Arm Workshops]] - ROS2 + computer-vision robotic-arm workshops (instructor).

@@ -40,6 +40,7 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
   - [[ROS2 Robotic Arm Workshops]]
   - [[Wei Khiang Trading Chatbot]]
   - [[Nasset Solution Chatbot]]
+  - [[VibeFit]]
 
 ## Businesses
 - [[Icy Production]] - photography and videography side hustle.

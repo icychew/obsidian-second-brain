@@ -19,4 +19,6 @@ related-people:
 - ACCA Foundation in Accountancy (FIA) - 5 of 7 papers completed (see [[ACCA Foundation in Accountancy]]).
 
 ## Academic
-- CGPA 3.47, Year 2 Mechanical Engineering at [[Universiti Malaya]] (as of 2026-06).
+- University: CGPA 3.47, Year 2 Mechanical Engineering at [[Universiti Malaya]] (as of 2026-06).
+- Matriculation: CGPA 4.00, Kolej Matrikulasi Kejuruteraan Kedah (2023).
+- SPM (Sijil Pelajaran Malaysia): 10A 1B.
