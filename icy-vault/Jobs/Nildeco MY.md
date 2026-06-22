@@ -13,11 +13,11 @@ related-people:
 # Nildeco MY
 
 ## For future Claude
-Nildeco MY is a scented-candle and fragrance brand (under Haru Spring Sdn Bhd) where [[Icy Chew Hao Yang]] worked in digital marketing. He logs this as Nildeco MY (2022) and as Digital Marketing Assistant, Haru Spring Sdn Bhd (2023) - likely the same employer/brand; exact span to confirm. This is where he built a broad early marketing skill set. Pull this for his marketing experience and transferable skills. Confidence: stated by Icy.
+Nildeco MY is a brand under Haru Spring Sdn Bhd (confirmed by Icy); his role there was Digital Marketing Assistant across 2022-2023. This is where he built a broad early marketing skill set. Pull this for his marketing experience and transferable skills. Confidence: stated by Icy.
 
 ## Role
 - Digital marketing, Nildeco MY (scented candle and fragrance brand) under Haru Spring Sdn Bhd.
-- Duration: 2022 (Mar-Jul) and into 2023 - confirm exact span.
+- Duration: 2022 to 2023.
 
 ## What he did / skills built
 - Facebook (Meta) ads.
