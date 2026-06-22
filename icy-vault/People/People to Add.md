@@ -20,6 +20,9 @@ A running to-do list of people [[Icy Chew Hao Yang]] has mentioned but not yet n
 - Engineering project teammates ([[Smart EV Battery Pack]], [[Smart City Bot]], [[Pallet i]], [[EVi - EV Troubleshooting Chatbot]]).
 - [[Icy Production]] clients.
 - Photojam co-organizers and the publishing team for the [[Photojam Book]].
+- Dr. Tay - [[UM Makers Club]] faculty advisor; plus the Makers Club committee and REC (Robotics Engineering Club) collaborators.
+- EV Eye judges (Haitham Alnaeb, Damon Leong, Aaron Lee, Wuen Han Lee).
+- Datuk Simon Shim - appears in a Drive dossier Icy prepared; clarify the relationship.
 
 ## Already captured
 - [[Yew Jia Haur]] - YB, Teratai market banners collaborator.

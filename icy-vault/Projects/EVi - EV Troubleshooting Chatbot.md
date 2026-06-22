@@ -16,18 +16,28 @@ related-projects:
 # EV Eye (EVi) - EV Troubleshooting Chatbot
 
 ## For future Claude
-A recent small-EV project by [[Icy Chew Hao Yang]]: EV Eye (stylized EVi), a chatbot that troubleshoots EV problems related to charger faults. The source lives in a local folder named "small ev". Pull this for his applied-AI / EV-support work. Confidence: stated by Icy.
+EV Eye is [[Icy Chew Hao Yang]]'s AI-Powered EV Charger Troubleshooting System, built for the ESUM x RExharge (Recharge Xolutions) Case Study Competition, Theme 2. Users report an EV-charger fault over WhatsApp with a photo and get safe guided troubleshooting or a structured technician handoff. Source is in his local "small ev" folder; the full project report is in his Google Drive. This is his strongest full-stack / applied-AI build. Confidence: stated by Icy and sourced from his project report (Drive, as of 2026-06).
 
 ## Overview
-- Name: EV Eye (stylized EVi).
-- A chatbot that troubleshoots EV problems, focused on charger faults.
-- Part of a small EV project; source in the local folder `small ev`.
+- Full name: AI-Powered EV Charger Troubleshooting System. Team name: EV Eye.
+- Competition: ESUM x RExharge Case Study Competition, Theme 2 (EV Charger Troubleshooting); pitched at a conference-level presentation to industry judges.
+- Flow: user reports a fault on WhatsApp, submits charger info + a photo, and receives safe guided troubleshooting or a technician handoff.
+
+## Architecture / stack
+- Orchestration: n8n workflow (~68 nodes, ~75 connections) covering intake, diagnosis, ticketing, and booking.
+- Messaging: WhatsApp via WPP Connect / Evolution API.
+- State + data: Redis (session state) + Supabase (Postgres, Storage, pgvector).
+- AI: OpenAI GPT-4V and a custom Roboflow vision model in parallel for fault classification; OpenAI embeddings + Supabase vector search for RAG (similar-case retrieval).
+- Booking: Google Calendar OAuth2. Security: bearer-token webhook auth + deduplication logic.
+- Decision engine: safety-first confidence threshold (about 0.40) + sanity checks to separate user-resolvable issues from technician-required faults.
+- Extra: a multilingual (English / Malay / Mandarin) voice-enabled AR assistant.
 
 ## Status
-- Active / recent.
+- MVP built and pitched (2026). Judges included Mr. Haitham Alnaeb, Mr. Damon Leong, Mr. Aaron Lee, and Mr. Wuen Han Lee.
 
 ## Open questions
-- Model / stack, the data sources used for troubleshooting, and deployment: TBD.
+- Result / placing at the competition, and current deployment status?
+- Teammates' names - see [[People to Add]].
 
 ## Recent Activity
 

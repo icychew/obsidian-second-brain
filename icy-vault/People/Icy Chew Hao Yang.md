@@ -40,6 +40,7 @@ The owner of the vault - the person you work for. This is the full profile that 
 - Released a single, 想你不只一天两天, through the Kuayue UM club on major music platforms ([[Kuayue UM Single - 想你不只一天两天]]).
 - Earlier: digital marketing at Nildeco MY (2022, see [[Nildeco MY]]); the Elementum periodic-table game at matrikulasi (2023, see [[Elementum]]).
 - Engineering and AI builds: [[Smart EV Battery Pack]], [[Smart City Bot]] (2nd runner-up), [[Pallet i]] (CREST), and [[EVi - EV Troubleshooting Chatbot]]. See [[Coding Projects Index]].
+- Engineering leadership: Executive Committee of the [[UM Makers Club]] (runs Makerspace@UM; national events MakerXpreneur 2026 and ARC: RoboSurvivor 2026).
 
 ## How we can help each other
 - He works at night - asynchronous, important-points-first communication suits him.
