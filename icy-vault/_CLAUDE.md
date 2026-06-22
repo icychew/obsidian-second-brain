@@ -47,6 +47,8 @@
 
 ## Key Files
 
+- **Start here / catalog:** `index.md`
+- **Identity (read first):** `SOUL.md`, `CRITICAL_FACTS.md`, `CORE_VALUES.md`; full profile `People/Icy Chew Hao Yang.md`
 - **Dashboard:** `Home.md`
 - **Work Board:** `Boards/Studies.md`
 - **Personal Board:** `Boards/Personal.md`

@@ -95,7 +95,6 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 - [[Mentions Log]] - recognition and shoutouts.
 - [[Income Streams]] - how Icy makes money.
 
-## Known gaps (to fill)
-- Per-project detail (stack, links, outcomes) and the rest of the projects in Icy's local folders: [[Coding Projects Index]].
-- People: band members, dance-sport collaborators, project teammates, and clients - tracked in [[People to Add]].
-- Detailed finances and more day-to-day people - not yet captured.
+## Deferred (by choice) and optional later
+- People notes are intentionally deferred for now (per Icy) - parked in [[People to Add]], not an open gap.
+- Optional refinements: per-project tech detail and any remaining local-folder projects ([[Coding Projects Index]]); detailed finances.
