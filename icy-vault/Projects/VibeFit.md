@@ -5,6 +5,7 @@ tags:
   - project
   - software
   - fitness
+  - ai
 ai-first: true
 status: active
 related-people:
@@ -16,11 +17,20 @@ related-projects:
 # VibeFit
 
 ## For future Claude
-VibeFit is a fitness web app [[Icy Chew Hao Yang]] built. The one-line description and website URL are not yet captured (TBD - to be provided by Icy). It likely connects his vibe-coding practice ([[Vibe Coding with Claude]]) with his fitness interest ([[Fitness Profile]]). Pull this once the details are filled. Confidence: stated by Icy (name only); specifics TBD.
+VibeFit (https://vibefit.my/) is a web-based fitness app [[Icy Chew Hao Yang]] solely designed and developed. It nudges developers to take micro exercise breaks while coding: a customizable timer, 2-5 minute routines, and in-browser MediaPipe pose detection that scores form and counts reps on-device (privacy-first - video never leaves the browser). It has an adaptive AI coach (3 levels), gamification (streaks, coins, a buddy "Vibey"), and a freemium model (Pro voice coaching at RM25/month). Stack: Next.js + browser ML (MediaPipe). It connects his vibe-coding ([[Vibe Coding with Claude]]) with his fitness focus ([[Fitness Profile]]) and is a strong candidate product for [[Build a One-Person Company]]. Confidence: stated by Icy + product website (as of 2026-06).
 
 ## Overview
-- A fitness web app. What it does, Icy's role, and the stack: TBD - confirm.
-- Website: TBD - confirm URL.
+- Web fitness companion for developers; Icy is the sole developer.
+- Customizable break timer + short (2-5 minute) workout routines.
+- In-browser MediaPipe pose detection: form scoring + rep counting, processed on-device (video never stored).
+- Adaptive AI coach (3 difficulty levels); gamification (streaks, coins, buddy "Vibey").
+- Freemium: free tier; Pro with voice coaching at RM25/month.
+
+## Stack
+- Next.js, MediaPipe, browser-based ML.
+
+## Links
+- https://vibefit.my/
 
 ## Recent Activity
 
