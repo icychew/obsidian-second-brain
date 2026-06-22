@@ -36,6 +36,10 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
   - [[Smart City Bot]]
   - [[Pallet i]]
   - [[EVi - EV Troubleshooting Chatbot]]
+  - [[Automated Lock and Mechanism Design]]
+  - [[ROS2 Robotic Arm Workshops]]
+  - [[Wei Khiang Trading Chatbot]]
+  - [[Nasset Solution Chatbot]]
 
 ## Businesses
 - [[Icy Production]] - photography and videography side hustle.
@@ -65,7 +69,9 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 - [[Bimage]] - Malaysian company, competition organizer.
 - [[Kuayue UM]] - UM club, released his single.
 - [[UM Dance Sport Club]] - MV dance collaborators.
-- [[UM Makers Club]] - student maker club; Icy is on the Executive Committee.
+- [[UM Makers Club]] - student maker club; Icy is Secretary.
+- [[ESUM]] - Engineering Society UM; Icy was Exec (Content & Marketing).
+- [[REC]] - Robotic Engineering Community; Icy was Exec (Multimedia & Publicity).
 
 ## Jobs
 - [[Nildeco MY]] - 2022 digital marketing.
@@ -73,6 +79,10 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 
 ## Life
 - [[Timeline]] - education, work, and travel history.
+
+## Reference
+- [[Roles and Commitments]] - full leadership / role log.
+- [[Certifications]] - CSWA, ACCA FIA, CGPA.
 
 ## Boards
 - [[Studies]], [[Freelance]], [[Personal]] - kanban boards.

@@ -16,23 +16,18 @@ related-projects:
 # Smart EV Battery Pack
 
 ## For future Claude
-A 2024 mechanical-engineering project by [[Icy Chew Hao Yang]]: a redesigned EV car battery pack using a honeycomb-cell structure and a combined sodium-ion + lithium-ion configuration. Goal: reduce the risk of thermal runaway (self-burning) and add a crumple zone for crash safety. Entered a competition run by Bimage, a Malaysian company. Pull this for his EV / battery and mechanical-design work. Confidence: stated by Icy.
+A mechanical-design project by [[Icy Chew Hao Yang]] (Lead Hardware Designer): a hybrid lithium-sodium-ion (Li-Na) EV battery pack designed in SOLIDWORKS with a custom honeycomb structure to maximize energy density, optimized thermal dissipation to reduce thermal-runaway risk, and a crumple zone for crash safety. Won 2nd Runner-Up at the Bimage x IMechE UM PDMC. Pull this for his CAD / EV / structural-design work. Confidence: stated by Icy.
 
 ## Overview
-- Redesign of an EV car battery pack.
-- Honeycomb-cell geometry for the pack structure.
-- Hybrid chemistry: a sodium-ion + lithium-ion configuration working together.
+- Hybrid lithium-sodium-ion (Li-Na) EV battery pack, designed in SOLIDWORKS.
+- Custom honeycomb structural design to maximize energy density.
+- Optimized thermal-dissipation pathways to mitigate thermal-runaway risk and improve lifecycle; integrated crumple zone for crash safety.
 
-## Why it matters / benefits
-- Reduces the risk of thermal runaway / self-burning of the EV.
-- Provides a crumple zone to absorb energy when the EV is in an accident.
+## Result
+- 2nd Runner-Up, Bimage x IMechE UM PDMC (national-level innovation platform). See [[Bimage]].
 
-## Status
-- Completed in 2024. Entered the [[Bimage]] competition (Bimage is a Malaysian company).
-
-## Open questions
-- Confirm the exact Bimage event name and result (and whether it is the same Bimage event as [[Smart City Bot]]).
-- Stack / tools (CAD, simulation), teammates, and any report or links: TBD.
+## Skills shown
+- SOLIDWORKS, structural design, thermal management, EV battery systems, crashworthiness.
 
 ## Recent Activity
 

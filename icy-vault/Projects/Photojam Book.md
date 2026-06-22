@@ -16,23 +16,21 @@ related-projects:
 # Photojam Book
 
 ## For future Claude
-The Photojam book is a published photography book that [[Icy Chew Hao Yang]] served as Chief Editor for, under the [[Photojam]] program. To publish it, Icy helped register Persatuan Fotografi Selangor dan KL as a publisher. It is sold at RM100 per copy to fundraise for Photojam's future activities. Released 2026-03-01. Status: active fundraiser. Pull this for anything about the book, its sales targets, or the publishing setup.
+"Harmonious Malaysia" (和谐大马) is the cultural-documentary photobook [[Icy Chew Hao Yang]] served as Chief Editor for, under [[Photojam]]. It is ISBN-registered and archived at the National Library of Malaysia (Perpustakaan Negara Malaysia). 300+ copies sold, raising RM30,000+ to fund Photojam events and activities. Released 2026-03-01. Pull this for the book, its impact, and the publishing setup. Confidence: stated by Icy.
 
 ## Overview
-- A book produced by [[Photojam]]; [[Icy Chew Hao Yang]] is Chief Editor.
-- Icy registered the persatuan (Persatuan Fotografi Selangor dan KL) as a publisher to release it.
-- Sold at RM100 per copy as a fundraiser for Photojam's future activities.
+- Title: "Harmonious Malaysia" (和谐大马) - a high-end cultural-documentary photobook capturing Malaysia's diverse heritage.
+- [[Icy Chew Hao Yang]] is Chief Editor; he led conceptualization, curation, layout design, and full-scale production.
+- ISBN-registered and archived at the National Library of Malaysia. Icy helped register [[Persatuan Fotografi Selangor dan KL]] as the publisher.
 
-## Status
-- Released 2026-03-01.
-- Sales goal: 1000 copies over 5 years. See [[Photojam Book 1000 Copies]].
-- Sold 300+ copies so far (as of 2026-06; confidence: stated by Icy).
+## Impact
+- 300+ copies sold; raised RM30,000+ for [[Photojam]] events and activities.
+- Launched at a corporate charity / fundraising gala dinner.
+- Sales goal: 1000 copies over 5 years (see [[Photojam Book 1000 Copies]]).
 
-## Key Decisions
-- Register the society as a publisher so Photojam could self-publish. Rationale: enables direct fundraising through book sales.
-
-## Links
-- Goal note: [[Photojam Book 1000 Copies]].
+## Execution highlights
+- Stakeholder and vendor management with publishing partners and print vendors (quality control, color reproduction, deadlines).
+- Managed timelines, budget distribution, and asset organization from field photography to mass print.
 
 ## Recent Activity
 

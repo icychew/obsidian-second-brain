@@ -22,7 +22,8 @@ The owner of the vault - the person you work for. This is the full profile that 
 ## About
 - 21 years old, born in Penang, now based in Kuala Lumpur, Malaysia.
 - Year 2 Bachelor of Mechanical Engineering at Universiti Malaya (entered Sep 2024). See [[Mechanical Engineering at Universiti Malaya]].
-- Concurrently doing the ACCA Foundation in Accountancy, at paper 5 as of 2026-06. See [[ACCA Foundation in Accountancy]].
+- Concurrently doing the ACCA Foundation in Accountancy (5 of 7 papers as of 2026-06). See [[ACCA Foundation in Accountancy]].
+- CGPA 3.47; Certified SOLIDWORKS Associate (CSWA). See [[Certifications]].
 - Builder across hardware and software; an active vibe coder with Claude. See [[Coding Projects Index]] and [[Vibe Coding with Claude]].
 - Creative entrepreneur: runs [[Icy Production]] for photography and videography.
 
@@ -40,7 +41,7 @@ The owner of the vault - the person you work for. This is the full profile that 
 - Released a single, 想你不只一天两天, through the Kuayue UM club on major music platforms ([[Kuayue UM Single - 想你不只一天两天]]).
 - Earlier: digital marketing at Nildeco MY (2022, see [[Nildeco MY]]); the Elementum periodic-table game at matrikulasi (2023, see [[Elementum]]).
 - Engineering and AI builds: [[Smart EV Battery Pack]], [[Smart City Bot]] (2nd runner-up), [[Pallet i]] (CREST), and [[EVi - EV Troubleshooting Chatbot]]. See [[Coding Projects Index]].
-- Engineering leadership: Executive Committee of the [[UM Makers Club]] (runs Makerspace@UM; national events MakerXpreneur 2026 and ARC: RoboSurvivor 2026).
+- Leadership: President of [[Photojam]] (2025/26) and Secretary of the [[UM Makers Club]]; also exec roles in [[ESUM]] and [[REC]]. Full log: [[Roles and Commitments]].
 
 ## How we can help each other
 - He works at night - asynchronous, important-points-first communication suits him.

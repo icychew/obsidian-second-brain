@@ -22,7 +22,7 @@ Elementum is a game [[Icy Chew Hao Yang]] built during his matriculation at Kole
 - Goal: make learning the periodic table playful.
 
 ## Status
-- Completed in 2023 (matriculation project). Tech stack, platform, and any links: TBD - confirm.
+- Completed in 2023 for PIITRAM 2023 (matriculation innovation event). Tech stack, platform, and links: TBD - confirm.
 
 ## Key Decisions
 - TBD.

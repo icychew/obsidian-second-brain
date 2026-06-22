@@ -16,22 +16,15 @@ related-projects:
 # Pallet i
 
 ## For future Claude
-A 2025 project by [[Icy Chew Hao Yang]] for the CREST competition: Pallet i, an AI pallet-monitoring robot. A conveyor belt carries pallets past a Raspberry Pi camera that can rotate on the X axis and move up and down on the Y axis to photograph each pallet from multiple angles, then runs automated health / quality checks. Pull this for his computer-vision / robotics work. Confidence: stated by Icy; some specifics TBD.
+PalletEye (also "Pallet i") is an AI pallet-monitoring system by [[Icy Chew Hao Yang]]: a conveyor-based inspection robot with a Raspberry Pi camera that rotates on the X axis and travels vertically on the Y axis to image pallets, running localized (edge) computer-vision checks for real-time quality and asset tracking. Won Champion at CREST 2025 and i-UM Disrupt 2025 (AI-Powered Solutions for Smart Cities theme). Pull this for his computer-vision / mechatronics work. Confidence: stated by Icy.
 
 ## Overview
-- AI pallet-monitoring robot.
-- Conveyor belt feeds pallets past a Raspberry Pi camera.
-- The camera rotates on the X axis and moves up and down on the Y axis to capture the pallet from multiple angles, then runs an automated health / quality check.
+- Edge-AI computer-vision system on a conveyor; Raspberry Pi camera with X-axis rotation and Y-axis vertical travel.
+- Real-time pallet inspection and asset tracking; integrated custom hardware housing with software pipelines to minimize inventory transit errors.
 
-## Context
-- Built for the CREST competition (2025).
-
-## Status
-- Completed (2025 competition project).
-
-## Open questions
-- Confirm the model / algorithm used and the result at CREST.
-- Team and any report or links: TBD.
+## Result
+- Champion, CREST 2025.
+- Champion, i-UM Disrupt 2025 (AI-Powered Solutions for Smart Cities theme).
 
 ## Recent Activity
 

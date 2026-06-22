@@ -13,10 +13,10 @@ related-people:
 # UM Makers Club
 
 ## For future Claude
-The UM Makers Club is a Universiti Malaya student club that runs Makerspace@UM (3D printing, laser cutting, robotics) and national / university maker events. [[Icy Chew Hao Yang]] is on its Executive Committee (Batch 2025/2026) and authored the 2026/2027 transition and handover portfolio. His exact title (President / EXCO role) is to be confirmed. Pull this for his engineering-leadership experience. Confidence: stated, sourced from his Drive handover portfolio (as of 2026-06).
+The UM Makers Club is a Universiti Malaya student club that runs Makerspace@UM (3D printing, laser cutting, robotics) and national / university maker events. [[Icy Chew Hao Yang]] is the Secretary (Batch 2025/2026) and authored the 2026/2027 transition and handover portfolio. Pull this for his engineering-leadership experience. Confidence: stated, sourced from his Drive handover portfolio (as of 2026-06).
 
 ## Icy's role
-- Executive Committee, Batch 2025/2026 (exact title TBD - confirm). Authored the executive handover portfolio.
+- Secretary, Batch 2025/2026. Authored the executive handover portfolio; drafted and pitched corporate sponsorship proposals (e.g. to Canon Malaysia and Fujifilm).
 
 ## What the committee delivered
 - MakerXpreneur 2026 (National) - entrepreneurship hardware competition; 18 teams, 6 finalists, ~90 participants.

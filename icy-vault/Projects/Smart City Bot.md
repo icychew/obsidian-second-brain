@@ -15,21 +15,17 @@ related-projects:
 # Smart City Bot
 
 ## For future Claude
-An autonomous smart-parking robot by [[Icy Chew Hao Yang]]: it parks cars autonomously using a scissor-lift mechanism that lifts the car and moves it into a parking spot. Won 2nd runner-up at a competition run by Bimage, a Malaysian company (Icy referred to it as "Small Bimage"). Pull this for his robotics / mechatronics work. Confidence: stated by Icy.
+An autonomous smart-parking robot by [[Icy Chew Hao Yang]]: it parks cars autonomously using a scissor-lift mechanism that lifts and positions the vehicle. Built for the Smart City Solution Competition (IMechE UM). Pull this for his robotics / mechatronics work. Confidence: stated by Icy. Note: an earlier account placed this as a Bimage 2nd runner-up; Icy later attributed the 2nd Runner-Up to the [[Smart EV Battery Pack]] - confirm the Smart City Bot's placing.
 
 ## Overview
 - A smart parking robot that performs autonomous parking.
-- Uses a scissor-lift mechanism to lift the car and park it.
+- Uses a scissor-lift mechanism to lift and position the vehicle.
 
-## Result
-- 2nd runner-up at the [[Bimage]] competition (Bimage is a Malaysian company).
+## Context
+- Smart City Solution Competition (IMechE UM).
 
 ## Status
-- Completed (competition project).
-
-## Open questions
-- Confirm the exact Bimage event name, year, and team.
-- Control stack, sensors, and hardware details: TBD.
+- Completed (competition project). Placing: TBD - confirm.
 
 ## Recent Activity
 

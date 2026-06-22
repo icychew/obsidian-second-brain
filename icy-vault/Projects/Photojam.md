@@ -24,7 +24,7 @@ Photojam is the youth wing of Persatuan Fotografi Selangor dan KL (a photography
 
 ## Overview
 - Photojam is the youth arm of Persatuan Fotografi Selangor dan KL.
-- [[Icy Chew Hao Yang]] leads or co-leads several initiatives under it, spanning publishing, music, community service, and brand workshops.
+- [[Icy Chew Hao Yang]] is President of Photojam (2025/26) and was an Executive (2024/25); he leads or co-leads several initiatives spanning publishing, music, community service, and brand workshops.
 - The work mixes creative output (book, song, MV) with community impact (hawker banners) and ecosystem building (camera-brand workshops).
 
 ## Initiatives

@@ -12,10 +12,10 @@ related-people:
 # Bimage
 
 ## For future Claude
-Bimage is a Malaysian company that runs a competition Icy entered with two engineering projects: [[Smart City Bot]] (2nd runner-up) and [[Smart EV Battery Pack]]. Icy referred to it as "Small Bimage". Pull this for the competition organizer behind those projects. Confidence: stated by Icy; exact event name TBD.
+Bimage is a Malaysian company that ran the Bimage x IMechE UM PDMC competition, where Icy's [[Smart EV Battery Pack]] won 2nd Runner-Up. Icy referred to it as "Small Bimage". Pull this for the competition organizer behind that project. Confidence: stated by Icy; exact full event name TBD.
 
 ## Key facts
 - A Malaysian company.
-- Runs a competition Icy joined; he called it "Small Bimage".
-- Icy's entries: [[Smart City Bot]] (2nd runner-up) and [[Smart EV Battery Pack]].
-- Exact event name and details: TBD - confirm.
+- Ran the Bimage x IMechE UM PDMC competition (Icy called it "Small Bimage").
+- Icy's entry: [[Smart EV Battery Pack]] - 2nd Runner-Up.
+- Exact full event name: TBD - confirm.
