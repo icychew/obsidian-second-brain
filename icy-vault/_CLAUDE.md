@@ -56,6 +56,19 @@
 
 ---
 
+## Reading protocol (context levels)
+
+Load context progressively to control tokens - never read the whole vault. Read only the level you need:
+
+- **L0 - Identity (almost always):** `SOUL.md`, `CRITICAL_FACTS.md`, `CORE_VALUES.md` (~300 tokens). Who Icy is and how to operate.
+- **L1 - Navigation:** `index.md` (catalog of every note) and `log.md` -> latest `Logs/`. Use to find the right note before opening it.
+- **L2 - Current state:** `Home.md`, the `Boards/`, and the most recent `Daily/`. What is active now.
+- **L3 - Deep:** open only the specific notes `index.md` points you to.
+
+Default to L0 + L1, then jump straight to the 1-3 notes you actually need. Escalate to a full scan only when a question truly requires it.
+
+---
+
 ## Auto-Save Rules
 
 Claude should auto-save the following **without asking**:

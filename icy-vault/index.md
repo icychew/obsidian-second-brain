@@ -84,6 +84,7 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 ## Reference
 - [[Roles and Commitments]] - full leadership / role log.
 - [[Certifications]] - CSWA, ACCA FIA, CGPA.
+- [[log]] - operation log (what changed and why).
 
 ## Boards
 - [[Studies]], [[Freelance]], [[Personal]] - kanban boards.
