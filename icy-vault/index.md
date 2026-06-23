@@ -47,6 +47,7 @@ Catalog of Icy's vault, grouped by area. Read this at L1 (after the identity fil
 
 ## Learning
 - [[Mechanical Engineering at Universiti Malaya]]
+- [[UM Mechanical Engineering Curriculum]] - full course structure (all years).
 - [[ACCA Foundation in Accountancy]]
 - [[Vibe Coding with Claude]]
 

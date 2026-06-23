@@ -21,7 +21,8 @@ related-people:
 - Prior step: matriculation at Kolej Matrikulasi Kejuruteraan Kedah (2023). See [[Timeline]].
 
 ## Current focus / modules
-- TBD - confirm current semester modules and any specialization.
+- Year 2, Semester 2 (as of 2026-06): Mechatronics II (KIG2020), Thermodynamics II (KIG2018), Numerical and Statistical Methods (KIG2019), Engineering Economics and Project Management (KIX2006), Design of Machine Element (KIG2017).
+- Full programme structure (all years, credits, sources): [[UM Mechanical Engineering Curriculum]].
 
 ## Notes
 - His hardware projects likely draw on this. See [[Coding Projects Index]].
