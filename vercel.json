@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/save.js", "use": "@vercel/node" },
+    { "src": "site/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/save", "methods": ["POST"], "dest": "/api/save.js" },
+    { "src": "/", "dest": "/site/index.html" },
+    { "src": "/(.*)", "dest": "/site/$1" }
+  ]
+}

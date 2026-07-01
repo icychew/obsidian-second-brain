@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icy's Second Brain - Voice Capture</title>
+<style>
+  :root{--bg:#0c1020;--panel:#161d33;--panel2:#1e2742;--ink:#e8edf7;--muted:#94a0c0;--line:#28324f;
+        --a1:#4f8cff;--a2:#8a5cff;--a3:#2dd4bf;--rec:#ff6b6b;--good:#36d399;--warn:#f7b955;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,Arial,sans-serif;background:
+    radial-gradient(1000px 600px at 85% -10%,#1a2547 0,transparent 55%),
+    radial-gradient(800px 500px at -10% 0,#162038 0,transparent 50%),var(--bg);
+    color:var(--ink);line-height:1.5;min-height:100vh;padding:24px 16px 60px}
+  .wrap{max-width:920px;margin:0 auto}
+  header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+  h1{font-size:22px;font-weight:800;background:linear-gradient(90deg,var(--a1),var(--a3),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav{margin-left:auto;display:flex;gap:8px}
+  .nav a{font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:var(--panel);padding:6px 12px;border-radius:999px}
+  .nav a:hover{color:var(--ink);border-color:#3b466e}
+  .panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}
+  .microw{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .mic{width:74px;height:74px;border-radius:50%;border:none;cursor:pointer;flex:0 0 auto;font-size:30px;color:#fff;
+       background:linear-gradient(145deg,var(--a1),var(--a2));box-shadow:0 8px 26px rgba(79,140,255,.35);transition:.15s}
+  .mic:hover{transform:scale(1.04)}
+  .mic.rec{background:linear-gradient(145deg,var(--rec),#ff9a3c);animation:pulse 1.3s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,107,107,.5)}70%{box-shadow:0 0 0 16px rgba(255,107,107,0)}100%{box-shadow:0 0 0 0 rgba(255,107,107,0)}}
+  .micinfo{flex:1;min-width:200px}
+  .micinfo .st{font-weight:700}
+  .micinfo .hint{font-size:13px;color:var(--muted)}
+  .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  label{font-size:12px;color:var(--muted);display:block;margin-bottom:4px}
+  select,input,textarea{background:#0e1428;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px;font-family:inherit;width:100%}
+  textarea{min-height:120px;resize:vertical;line-height:1.55}
+  .col{flex:1;min-width:150px}
+  .btn{cursor:pointer;border:none;border-radius:10px;padding:10px 16px;font-weight:700;font-size:14px}
+  .btn.primary{background:linear-gradient(90deg,var(--a1),var(--a2));color:#fff}
+  .btn.ghost{background:var(--panel);border:1px solid var(--line);color:var(--ink)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  details{margin-top:14px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:#0e1428}
+  details summary{cursor:pointer;font-size:13px;color:var(--muted);font-weight:600}
+  .ai-grid{display:grid;gap:10px;margin-top:10px}
+  @media(min-width:640px){.ai-grid{grid-template-columns:2fr 1fr}}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--a3);margin:4px 0 10px}
+  pre{background:#0a0f1f;border:1px solid var(--line);border-radius:12px;padding:16px;overflow:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#cdd7ee;max-height:420px}
+  .out-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+  .fname{font-family:ui-monospace,monospace;font-size:12px;color:var(--a3)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.7}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--good);color:#04230f;font-weight:700;padding:10px 18px;border-radius:10px;opacity:0;transition:.2s;pointer-events:none}
+  .toast.show{opacity:1}
+  .err{color:var(--rec);font-size:13px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Icy's Second Brain</h1>
+    <nav class="nav">
+      <a href="skills.html">Skills Map</a>
+      <a href="brain.html">Brain Map</a>
+    </nav>
+  </header>
+
+  <div class="panel">
+    <h2>Voice capture copilot</h2>
+    <div class="microw">
+      <button class="mic" id="mic" title="Start/stop voice">&#127908;</button>
+      <div class="micinfo">
+        <div class="st" id="status">Tap the mic and start talking</div>
+        <div class="hint" id="hint">Speak your idea, project, or note. It transcribes live below - then turn it into a clean vault note.</div>
+      </div>
+      <div>
+        <label>Voice language</label>
+        <select id="lang" style="width:auto">
+          <option value="en-US">English</option>
+          <option value="zh-CN">中文 (Mandarin)</option>
+          <option value="ms-MY">Bahasa Melayu</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col" style="flex:0 0 100%">
+        <label>Transcript (you can also type / edit)</label>
+        <textarea id="transcript" placeholder="Your spoken words appear here..."></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>Note type</label>
+        <select id="type">
+          <option value="idea">Idea</option>
+          <option value="project">Project</option>
+          <option value="person">Person</option>
+          <option value="knowledge">Knowledge</option>
+          <option value="learning">Learning</option>
+          <option value="goal">Goal</option>
+          <option value="decision">Decision</option>
+          <option value="daily">Daily</option>
+          <option value="log">Log</option>
+        </select>
+      </div>
+      <div class="col" style="flex:2">
+        <label>Title</label>
+        <input id="title" placeholder="Short title for the note">
+      </div>
+    </div>
+
+    <details>
+      <summary>AI copilot (optional) - structure the note with Claude</summary>
+      <div class="ai-grid">
+        <div>
+          <label>Anthropic API key (stored only in this browser)</label>
+          <input id="apikey" type="password" placeholder="sk-ant-... (leave blank to use offline template mode)">
+        </div>
+        <div>
+          <label>Model</label>
+          <select id="model">
+            <option value="claude-sonnet-4-6">Sonnet 4.6 (balanced)</option>
+            <option value="claude-haiku-4-5-20251001">Haiku 4.5 (fast/cheap)</option>
+            <option value="claude-opus-4-8">Opus 4.8 (best)</option>
+          </select>
+        </div>
+      </div>
+      <div class="note">With a key, the copilot rewrites your brain-dump into a proper AI-first note (preamble, wikilinks, recency markers). Without one, a built-in template does it offline. Your key never leaves your browser (saved to localStorage).</div>
+      <div class="err" id="aierr"></div>
+    </details>
+
+    <div class="row">
+      <button class="btn primary" id="gen">Generate note</button>
+      <button class="btn ghost" id="clear">Clear</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Generated note</h2>
+    <div class="fname" id="fname">save as: -</div>
+    <pre id="output">Your AI-first note will appear here.</pre>
+    <div class="out-actions">
+      <button class="btn primary" id="copy">Copy note</button>
+      <button class="btn ghost" id="download">Download .md</button>
+      <input id="passcode" type="password" placeholder="save passcode" style="width:auto;max-width:150px">
+      <button class="btn ghost" id="saveonline">Save to brain online</button>
+      <span id="savemsg" class="note" style="margin:0"></span>
+    </div>
+    <div class="note">
+      <b>Save to brain online</b> commits the note straight into your vault repo (needs the passcode + server env vars - see setup).
+      Or download the .md into your <span class="fname">icy-vault</span> folder, or copy it and tell your local Claude Code "save this to my vault".
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast">Copied</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const today=new Date().toISOString().slice(0,10);
+
+const TYPES={
+  idea:     {folder:'Ideas',     status:'captured', datedFile:true},
+  project:  {folder:'Projects',  status:'active'},
+  person:   {folder:'People'},
+  knowledge:{folder:'Knowledge'},
+  learning: {folder:'Learning',  status:'in-progress'},
+  goal:     {folder:'Goals',     status:'active'},
+  decision: {folder:'Knowledge'},
+  daily:    {folder:'Daily',     fixedTitle:true},
+  log:      {folder:'Logs',      datedFile:true},
+};
+
+let rec=null, listening=false, finalText='';
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+if(!SR){ $('hint').textContent='Voice not supported in this browser - use Chrome or Edge, or just type below.'; $('mic').disabled=true; }
+function buildRec(){
+  rec=new SR(); rec.continuous=true; rec.interimResults=true; rec.lang=$('lang').value;
+  rec.onresult=e=>{ let interim='';
+    for(let i=e.resultIndex;i<e.results.length;i++){ const t=e.results[i][0].transcript;
+      if(e.results[i].isFinal) finalText+=t+' '; else interim+=t; }
+    $('transcript').value=(finalText+interim).replace(/\s+/g,' ').trimStart();
+  };
+  rec.onerror=e=>{ $('status').textContent='Mic error: '+e.error; };
+  rec.onend=()=>{ if(listening){ try{rec.start();}catch(_){} } };
+}
+$('mic').onclick=()=>{
+  if(!SR) return;
+  if(!listening){ finalText=$('transcript').value?($('transcript').value+' '):''; buildRec();
+    try{rec.start();}catch(_){}
+    listening=true; $('mic').classList.add('rec'); $('mic').innerHTML='&#9209;';
+    $('status').textContent='Listening...'; $('hint').textContent='Speak naturally. Tap again to stop.';
+  } else { listening=false; try{rec.stop();}catch(_){}
+    $('mic').classList.remove('rec'); $('mic').innerHTML='&#127908;';
+    $('status').textContent='Stopped'; $('hint').textContent='Edit the transcript if needed, then Generate note.';
+  }
+};
+$('lang').onchange=()=>{ if(listening && rec){ rec.stop(); } };
+
+$('apikey').value=localStorage.getItem('sb_key')||'';
+$('model').value=localStorage.getItem('sb_model')||'claude-sonnet-4-6';
+$('apikey').onchange=()=>localStorage.setItem('sb_key',$('apikey').value.trim());
+$('model').onchange=()=>localStorage.setItem('sb_model',$('model').value);
+
+function slug(s){return (s||'note').trim().replace(/[\\/:*?"<>|]/g,'').slice(0,60);}
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+function tmplNote(type,title,body){
+  const cfg=TYPES[type]; const t=title.trim()||(type==='daily'?today:'Untitled');
+  let fm=`---\ndate: ${today}\ntype: ${type}\ntags:\n  - ${type}\nai-first: true\n`;
+  if(cfg.status) fm+=`status: ${cfg.status}\n`;
+  fm+=`---\n\n`;
+  const head = type==='daily' ? `# ${today}` : `# ${t}`;
+  const firstSentence=(body.trim().split(/(?<=[.!?])\s/)[0]||'').slice(0,160);
+  const pre=`## For future Claude\n${cap(type)} note captured by voice on ${today}. ${firstSentence||('Captures notes about '+t+'.')} Review and add [[wikilinks]] for any people, projects, or ideas mentioned.`;
+  const bodyOut = body.trim() ? body.trim().split(/\n+/).map(l=>l.trim()).filter(Boolean).map(l=>'- '+l).join('\n') : '- TBD';
+  return `${fm}${head}\n\n${pre}\n\n## Notes\n${bodyOut}\n`;
+}
+function fileName(type,title){
+  const cfg=TYPES[type]; const t=type==='daily'?today:slug(title||'untitled');
+  const name=cfg.datedFile&&type!=='daily'?`${today} - ${t}`:t;
+  return `${cfg.folder}/${name}.md`;
+}
+
+async function aiNote(type,title,body,key,model){
+  const sys=`You convert a spoken brain-dump into ONE Obsidian note for an AI-first "second brain". Output ONLY the note in Markdown - no preface, no code fences.
+Rules:
+- Start with YAML frontmatter between --- lines: date: ${today}, type: ${type}, tags: [${type}, ...relevant], ai-first: true (add status if it is a project/idea/goal/learning).
+- Then "# Title".
+- Then "## For future Claude" with a 2-3 sentence plain-English summary of what the note captures and why.
+- Then the structured body as bullet points under clear headers.
+- Use [[wikilinks]] for every person, project, idea, organization, or concept mentioned.
+- Attach "(as of ${today})" to any time-sensitive claim; keep any source/URL verbatim.
+- ASCII punctuation only: no em-dashes, curly quotes, or ellipsis characters. Use " - ", straight quotes, "...".
+- Be faithful to the transcript. Do not invent facts. Mark unknowns as TBD.`;
+  const user=`Note type: ${type}\nTitle: ${title||'(none - infer one)'}\nTranscript:\n${body}`;
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify({model,max_tokens:1500,system:sys,messages:[{role:'user',content:user}]})
+  });
+  if(!res.ok){ const e=await res.text(); throw new Error('API '+res.status+': '+e.slice(0,200)); }
+  const data=await res.json();
+  return (data.content||[]).map(b=>b.text||'').join('').trim();
+}
+
+$('gen').onclick=async()=>{
+  const type=$('type').value, title=$('title').value, body=$('transcript').value.trim();
+  $('aierr').textContent='';
+  if(!body){ $('output').textContent='Say or type something first.'; return; }
+  $('fname').textContent='save as: '+fileName(type,title);
+  const key=$('apikey').value.trim(), model=$('model').value;
+  if(key){
+    $('gen').disabled=true; $('gen').textContent='Thinking...'; $('output').textContent='Asking Claude to structure your note...';
+    try{ const md=await aiNote(type,title,body,key,model); $('output').textContent=md; }
+    catch(err){ $('aierr').textContent=String(err.message||err)+' - falling back to offline template.'; $('output').textContent=tmplNote(type,title,body); }
+    finally{ $('gen').disabled=false; $('gen').textContent='Generate note'; }
+  } else {
+    $('output').textContent=tmplNote(type,title,body);
+  }
+};
+$('clear').onclick=()=>{ $('transcript').value=''; finalText=''; $('title').value=''; $('output').textContent='Your AI-first note will appear here.'; $('fname').textContent='save as: -'; $('savemsg').textContent=''; };
+
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1400);}
+$('copy').onclick=async()=>{ const txt=$('output').textContent; try{await navigator.clipboard.writeText(txt);toast('Copied');}catch(_){toast('Select + copy manually');} };
+$('download').onclick=()=>{ const txt=$('output').textContent; const name=(fileName($('type').value,$('title').value).split('/').pop())||'note.md';
+  const blob=new Blob([txt],{type:'text/markdown'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; a.click(); URL.revokeObjectURL(a.href); toast('Downloaded '+name); };
+
+$('passcode').value=localStorage.getItem('sb_pass')||'';
+$('passcode').onchange=()=>localStorage.setItem('sb_pass',$('passcode').value);
+$('saveonline').onclick=async()=>{
+  const content=$('output').textContent;
+  if(!content||content.startsWith('Your AI-first note')){ $('savemsg').textContent='Generate a note first.'; return; }
+  const path=fileName($('type').value,$('title').value);
+  $('saveonline').disabled=true; $('savemsg').textContent='Saving...';
+  try{
+    const r=await fetch('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({path,content,passcode:$('passcode').value})});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok){ $('savemsg').innerHTML='Saved to your vault'+(j.url?(' - <a href="'+j.url+'" target="_blank">view</a>'):'')+'.'; toast('Saved'); }
+    else { $('savemsg').textContent='Error: '+((j&&j.error)||r.status); }
+  }catch(e){ $('savemsg').textContent='Error: '+e.message; }
+  finally{ $('saveonline').disabled=false; }
+};
+</script>
+</body>
+</html>
