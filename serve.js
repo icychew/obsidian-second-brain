@@ -5,11 +5,13 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 const ROOT = __dirname;
 const SITE = path.join(ROOT, 'site');
 const VAULT = process.env.OBSIDIAN_VAULT_PATH || path.join(ROOT, 'icy-vault');
 const PORT = process.env.PORT || 4321;
+function lanIP(){ const ifs=os.networkInterfaces(); for(const n of Object.keys(ifs)){ for(const i of ifs[n]){ if(i.family==='IPv4'&&!i.internal) return i.address; } } return null; }
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css',
   '.json': 'application/json', '.png': 'image/png', '.svg': 'image/svg+xml', '.ico': 'image/x-icon',
@@ -59,6 +61,7 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log('');
   console.log('  Icy Second Brain is running:  http://localhost:' + PORT);
+  const ip = lanIP(); if (ip) console.log('  On your phone (same WiFi):    http://' + ip + ':' + PORT);
   console.log('  Site:   ' + SITE);
   console.log('  Vault:  ' + VAULT + '   (notes save here)');
   console.log('  Stop with Ctrl+C');
