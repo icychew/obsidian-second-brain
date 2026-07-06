@@ -1,0 +1,25 @@
+# Deploy ONLY the public/ portfolio bundle. Keep the private vault and all
+# source off the deployment upload.
+icy-vault
+site
+api
+serve.js
+start-brain.bat
+adapters
+commands
+references
+scripts
+hooks
+examples
+tests
+dist
+docs
+.github
+*.md
+*.py
+*.sh
+*.toml
+*.cff
+*.txt
+*.lock
+install.sh
