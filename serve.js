@@ -7,9 +7,10 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
-const ROOT = __dirname;
-const SITE = path.join(ROOT, 'site');
-const VAULT = process.env.OBSIDIAN_VAULT_PATH || path.join(ROOT, 'icy-vault');
+const isPkg = !!process.pkg;                                  // true when running as the packaged .exe
+const BASE = isPkg ? path.dirname(process.execPath) : __dirname; // folder the exe/script lives in
+const SITE = path.join(BASE, 'site');
+const VAULT = process.env.OBSIDIAN_VAULT_PATH || path.join(BASE, 'icy-vault');
 const PORT = process.env.PORT || 4321;
 function lanIP(){ const ifs=os.networkInterfaces(); for(const n of Object.keys(ifs)){ for(const i of ifs[n]){ if(i.family==='IPv4'&&!i.internal) return i.address; } } return null; }
 
@@ -64,6 +65,7 @@ server.listen(PORT, () => {
   const ip = lanIP(); if (ip) console.log('  On your phone (same WiFi):    http://' + ip + ':' + PORT);
   console.log('  Site:   ' + SITE);
   console.log('  Vault:  ' + VAULT + '   (notes save here)');
-  console.log('  Stop with Ctrl+C');
+  console.log('  Stop by closing this window (or Ctrl+C)');
   console.log('');
+  if (isPkg && process.platform === 'win32') { try { require('child_process').exec('start "" http://localhost:' + PORT); } catch (e) {} }
 });
