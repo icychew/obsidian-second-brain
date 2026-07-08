@@ -67,5 +67,7 @@ server.listen(PORT, () => {
   console.log('  Vault:  ' + VAULT + '   (notes save here)');
   console.log('  Stop by closing this window (or Ctrl+C)');
   console.log('');
-  if (isPkg && process.platform === 'win32') { try { require('child_process').exec('start "" http://localhost:' + PORT); } catch (e) {} }
+  const _url = 'http://localhost:' + PORT;
+  const _open = process.platform === 'win32' ? 'start ""' : process.platform === 'darwin' ? 'open' : 'xdg-open';
+  try { require('child_process').exec(_open + ' ' + _url); } catch (e) {}
 });

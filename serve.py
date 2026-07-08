@@ -71,6 +71,11 @@ if __name__ == '__main__':
     print('  Stop with Ctrl+C')
     print('')
     try:
+        import webbrowser
+        webbrowser.open('http://localhost:%d' % PORT)
+    except Exception:
+        pass
+    try:
         httpd.serve_forever()
     except KeyboardInterrupt:
         pass

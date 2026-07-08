@@ -10,8 +10,7 @@ if errorlevel 1 (
   pause
   exit /b
 )
-echo   Opening your Second Brain...
-start "" http://localhost:4321
+echo   Starting your Second Brain... a browser tab opens once it is ready.
 node "%~dp0serve.js"
 echo.
 echo   Server stopped. Close this window.
