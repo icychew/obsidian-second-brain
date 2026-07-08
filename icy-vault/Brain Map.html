@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icy Chew Hao Yang - Brain Map</title>
+<style>
+  :root{--bg:#0b0f1c;--card:#161d34;--ink:#e8edf7;--muted:#94a0c0;--line:#28324f;
+        --idn:#f7b955;--goal:#ff6b9d;--proj:#4f8cff;--crea:#8a5cff;--org:#2dd4bf;
+        --learn:#5ad1ff;--meta:#9aa6c4;--job:#f7955d;--pers:#c084fc;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:"Segoe UI",system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);overflow:hidden}
+  .topbar{display:flex;align-items:center;gap:16px;padding:12px 20px;border-bottom:1px solid var(--line);
+          background:linear-gradient(180deg,#121831,#0b0f1c)}
+  .title{font-weight:800;font-size:18px;background:linear-gradient(90deg,#4f8cff,#2dd4bf,#8a5cff);
+         -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+  .tabs{display:flex;gap:6px;margin-left:8px}
+  .tab{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--muted);
+       padding:7px 15px;border-radius:999px;font-size:13px;font-weight:600;transition:.15s}
+  .tab.on{color:#0b1020;background:linear-gradient(90deg,#4f8cff,#8a5cff);border-color:transparent}
+  .hint{margin-left:auto;color:var(--muted);font-size:12px}
+  .view{position:absolute;top:57px;left:0;right:0;bottom:0}
+  #graphView{}
+  #c{display:block;width:100%;height:100%;cursor:grab}
+  #c:active{cursor:grabbing}
+  .legend{position:absolute;left:16px;bottom:16px;background:rgba(16,22,42,.82);border:1px solid var(--line);
+          border-radius:12px;padding:12px 14px;backdrop-filter:blur(6px);font-size:12px;display:grid;gap:6px}
+  .legend .row{display:flex;align-items:center;gap:8px;color:var(--muted)}
+  .legend .d{width:10px;height:10px;border-radius:3px}
+  .gctrl{position:absolute;right:16px;top:16px;display:flex;gap:8px}
+  .gctrl button{background:var(--card);border:1px solid var(--line);color:var(--ink);width:34px;height:34px;
+                border-radius:9px;font-size:16px;cursor:pointer}
+  .gctrl button:hover{border-color:#3b466e}
+  .tip{position:absolute;background:rgba(10,14,28,.95);border:1px solid var(--line);border-radius:8px;
+       padding:6px 10px;font-size:12px;pointer-events:none;opacity:0;transition:.1s;max-width:240px}
+  /* timeline */
+  #timelineView{overflow:auto;padding:24px 20px 60px}
+  .tl{max-width:1000px;margin:0 auto;position:relative}
+  .tl::before{content:"";position:absolute;left:64px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .yr{display:flex;gap:20px;margin-bottom:26px;position:relative}
+  .ybadge{flex:0 0 48px;text-align:right;font-weight:800;font-size:20px;color:var(--ink);position:relative;z-index:2}
+  .ydot{position:absolute;left:60px;top:6px;width:10px;height:10px;border-radius:50%;background:#4f8cff;
+        box-shadow:0 0 0 4px rgba(79,140,255,.18)}
+  .cards{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-left:24px}
+  .mc{background:var(--card);border:1px solid var(--line);border-left-width:4px;border-radius:12px;padding:12px 14px}
+  .mc h4{font-size:14px;margin-bottom:4px}
+  .mc .t{font-size:11px;color:var(--muted)}
+  .mc .award{color:var(--idn);font-weight:700}
+  h2.section{max-width:1000px;margin:6px auto 14px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#2dd4bf}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="title">Icy's Brain Map</span>
+  <div class="tabs">
+    <span class="tab on" data-v="graph">Knowledge Graph</span>
+    <span class="tab" data-v="timeline">Project Timeline</span>
+  </div>
+  <span class="hint">drag nodes &middot; scroll to zoom &middot; drag background to pan</span>
+</div>
+
+<div class="view" id="graphView">
+  <canvas id="c"></canvas>
+  <div class="gctrl"><button id="zin">+</button><button id="zout">&minus;</button><button id="zfit">&#9711;</button></div>
+  <div class="legend" id="legend"></div>
+  <div class="tip" id="tip"></div>
+</div>
+
+<div class="view" id="timelineView" style="display:none">
+  <h2 class="section">Icy's journey &mdash; education, work, projects &amp; achievements</h2>
+  <div class="tl" id="tl"></div>
+</div>
+
+<script>
+const TYPES={identity:['Identity','#f7b955'],goal:['Goal','#ff6b9d'],project:['Engineering / AI project','#4f8cff'],
+  creative:['Creative / community','#8a5cff'],org:['Organization','#2dd4bf'],learning:['Learning','#5ad1ff'],
+  meta:['Synthesis / record','#9aa6c4'],job:['Job','#f7955d'],person:['Person','#c084fc']};
+
+const N=[
+ ['icy','Icy Chew Hao Yang','identity'],
+ ['g1','One-Person Company','goal'],['g2','MNC Engineer 2028','goal'],['g3','Photojam 1000 Copies','goal'],['g4','Return to Optimum Weight','goal'],
+ ['p1','EV Battery Pack','project'],['p2','Smart City Bot','project'],['p3','PalletEye','project'],['p4','EV Eye','project'],
+ ['p5','Automated Lock','project'],['p6','Robocon 2025','project'],['p7','ROS2 Workshops','project'],['p8','Wei Khiang Chatbot','project'],
+ ['p9','Nasset Chatbot','project'],['p10','VibeFit','project'],['p11','Elementum','project'],
+ ['c0','Photojam','creative'],['c1','Harmonious Malaysia Book','creative'],['c2','Band & MV','creative'],['c3','Teratai Banners','creative'],
+ ['c4','Camera Workshops','creative'],['c5','Kuayue Single','creative'],['c6','Icy Production','creative'],
+ ['o1','Universiti Malaya','org'],['o2','UM Makers Club','org'],['o3','ESUM','org'],['o4','REC','org'],
+ ['o5','Persatuan Fotografi','org'],['o6','Bimage','org'],['o7','Kuayue UM','org'],['o8','UM Dance Sport','org'],
+ ['l1','Mech Eng @ UM','learning'],['l2','ACCA FIA','learning'],['l3','Vibe Coding','learning'],['l4','AI FEA/CAE/CFD','learning'],
+ ['m1','Certifications (CSWA)','meta'],['m2','Roles & Commitments','meta'],['m3','Synthesis','meta'],['m4','Roadmap','meta'],
+ ['m5','Fitness Profile','meta'],['m6','Income Streams','meta'],
+ ['j1','Haru Spring (Nildeco)','job'],['j2','Early F&B Jobs','job'],['pe1','YB Yew Jia Haur','person'],
+];
+const E=[
+ ['icy','g1'],['icy','g2'],['icy','l1'],['icy','l2'],['icy','l3'],['icy','o1'],['icy','o2'],['icy','c0'],['icy','c6'],
+ ['icy','m1'],['icy','m2'],['icy','m3'],['icy','m5'],['icy','j1'],['icy','j2'],['icy','pe1'],['icy','p3'],['icy','p4'],['icy','p10'],
+ ['g1','l1'],['g1','l2'],['g1','l3'],['g1','c6'],['g1','m3'],['g1','m4'],['g2','l4'],['g2','l1'],['g3','c1'],['g3','c0'],['g4','m5'],
+ ['l1','o1'],['l3','p10'],['l3','p4'],['l3','p8'],['l4','l1'],['l4','l3'],['l4','p4'],
+ ['p1','o6'],['p1','l1'],['p2','o1'],['p3','l3'],['p4','o3'],['p5','icy'],['p6','o1'],['p6','o4'],['p7','o2'],['p8','icy'],['p9','icy'],
+ ['p10','m5'],['p11','icy'],['p3','p4'],
+ ['c0','o5'],['c0','c1'],['c0','c2'],['c0','c3'],['c0','c4'],['c1','o5'],['c2','o8'],['c3','pe1'],['c5','o7'],['c6','m6'],
+ ['o1','o2'],['o1','o3'],['o1','o4'],['o1','o7'],['o1','o8'],['o2','o4'],['m1','l2'],['m2','o2'],['m2','o3'],['m2','o4'],['m6','j1'],
+];
+
+// ---- build graph
+const cv=document.getElementById('c'), ctx=cv.getContext('2d'), tip=document.getElementById('tip');
+let W,H,DPR;
+function resize(){DPR=window.devicePixelRatio||1;const r=cv.getBoundingClientRect();W=r.width;H=r.height;
+  cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
+window.addEventListener('resize',resize);
+
+const deg={}; E.forEach(([a,b])=>{deg[a]=(deg[a]||0)+1;deg[b]=(deg[b]||0)+1;});
+const nodes=N.map(([id,label,type])=>({id,label,type,x:(Math.random()-.5)*400,y:(Math.random()-.5)*400,
+  vx:0,vy:0,r:6+Math.min(12,(deg[id]||1)*1.2),col:TYPES[type][1]}));
+const byId={};nodes.forEach(n=>byId[n.id]=n);
+const edges=E.map(([a,b])=>({a:byId[a],b:byId[b]}));
+const adj={};nodes.forEach(n=>adj[n.id]=new Set());E.forEach(([a,b])=>{adj[a].add(b);adj[b].add(a);});
+
+let k=1, tx=0, ty=0; // zoom/pan (world->screen: s = world*k + t + center)
+function center(){return [W/2,H/2];}
+let hover=null, drag=null, panning=false, lastM=null;
+
+// physics
+function tick(){
+  const REP=4200, SPR=0.02, LEN=70, GRAV=0.015, DAMP=0.86;
+  for(let i=0;i<nodes.length;i++){
+    const a=nodes[i];
+    for(let j=i+1;j<nodes.length;j++){
+      const b=nodes[j];let dx=a.x-b.x,dy=a.y-b.y;let d2=dx*dx+dy*dy||0.01;let d=Math.sqrt(d2);
+      let f=REP/d2;let fx=f*dx/d,fy=f*dy/d;a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy;
+    }
+    a.vx-=a.x*GRAV;a.vy-=a.y*GRAV;
+  }
+  edges.forEach(e=>{let dx=e.b.x-e.a.x,dy=e.b.y-e.a.y;let d=Math.sqrt(dx*dx+dy*dy)||0.01;
+    let f=SPR*(d-LEN);let fx=f*dx/d,fy=f*dy/d;e.a.vx+=fx;e.a.vy+=fy;e.b.vx-=fx;e.b.vy-=fy;});
+  nodes.forEach(n=>{if(n===drag)return;n.vx*=DAMP;n.vy*=DAMP;n.x+=n.vx;n.y+=n.vy;});
+}
+function W2S(n){const[cx,cy]=center();return[n.x*k+tx+cx, n.y*k+ty+cy];}
+function S2W(sx,sy){const[cx,cy]=center();return[(sx-tx-cx)/k,(sy-ty-cy)/k];}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  // edges
+  edges.forEach(e=>{const[ax,ay]=W2S(e.a),[bx,by]=W2S(e.b);
+    const hot=hover&&(e.a===hover||e.b===hover);
+    ctx.strokeStyle=hot?'rgba(120,170,255,.85)':'rgba(120,140,200,.13)';ctx.lineWidth=hot?1.6:1;
+    ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(bx,by);ctx.stroke();});
+  // nodes
+  nodes.forEach(n=>{const[x,y]=W2S(n);const dim=hover&&hover!==n&&!adj[hover.id].has(n.id);
+    ctx.globalAlpha=dim?0.28:1;
+    ctx.beginPath();ctx.arc(x,y,n.r*Math.sqrt(k>1?1:k)+(n===hover?2:0),0,7);ctx.fillStyle=n.col;ctx.fill();
+    ctx.lineWidth=1.5;ctx.strokeStyle='rgba(8,12,24,.7)';ctx.stroke();
+    if(k>0.65||n.type==='identity'||n===hover){ctx.globalAlpha=dim?0.3:0.92;
+      ctx.fillStyle='#dfe6f5';ctx.font=(n===hover?'700 ':'')+Math.max(10,11*Math.min(1.3,k))+'px Segoe UI';
+      ctx.textAlign='center';ctx.fillText(n.label,x,y-n.r-5);}
+    ctx.globalAlpha=1;});
+}
+function loop(){tick();draw();requestAnimationFrame(loop);}
+
+function nodeAt(sx,sy){let best=null,bd=1e9;nodes.forEach(n=>{const[x,y]=W2S(n);const d=Math.hypot(x-sx,y-sy);
+  if(d<Math.max(12,n.r+6)&&d<bd){bd=d;best=n;}});return best;}
+
+cv.addEventListener('mousemove',ev=>{const r=cv.getBoundingClientRect();const sx=ev.clientX-r.left,sy=ev.clientY-r.top;
+  if(drag){const[wx,wy]=S2W(sx,sy);drag.x=wx;drag.y=wy;drag.vx=drag.vy=0;return;}
+  if(panning&&lastM){tx+=sx-lastM[0];ty+=sy-lastM[1];lastM=[sx,sy];return;}
+  const n=nodeAt(sx,sy);hover=n;
+  if(n){tip.style.opacity=1;tip.style.left=(sx+14)+'px';tip.style.top=(sy+57+10)+'px';
+    tip.innerHTML='<b>'+n.label+'</b><br><span style="color:'+n.col+'">'+TYPES[n.type][0]+'</span>';}
+  else tip.style.opacity=0;});
+cv.addEventListener('mousedown',ev=>{const r=cv.getBoundingClientRect();const sx=ev.clientX-r.left,sy=ev.clientY-r.top;
+  const n=nodeAt(sx,sy);if(n){drag=n;}else{panning=true;lastM=[sx,sy];}});
+window.addEventListener('mouseup',()=>{drag=null;panning=false;lastM=null;});
+cv.addEventListener('wheel',ev=>{ev.preventDefault();const r=cv.getBoundingClientRect();const sx=ev.clientX-r.left,sy=ev.clientY-r.top;
+  const[wx,wy]=S2W(sx,sy);const f=ev.deltaY<0?1.12:0.89;k=Math.max(0.3,Math.min(3,k*f));
+  const[cx,cy]=center();tx=sx-cx-wx*k;ty=sy-cy-wy*k;},{passive:false});
+document.getElementById('zin').onclick=()=>k=Math.min(3,k*1.2);
+document.getElementById('zout').onclick=()=>k=Math.max(0.3,k*0.83);
+document.getElementById('zfit').onclick=()=>{k=1;tx=0;ty=0;};
+
+document.getElementById('legend').innerHTML=Object.values(TYPES).map(([nm,c])=>
+  `<div class="row"><span class="d" style="background:${c}"></span>${nm}</div>`).join('');
+
+// ---- timeline
+const TL=[
+ ['2022',[['SPM &mdash; 10A 1B','identity','Result'],['Digital Marketing, Haru Spring (Nildeco)','job','']]],
+ ['2023',[['Matriculation &mdash; CGPA 4.00','identity','Kolej Matrikulasi Kejuruteraan Kedah'],
+          ['Elementum','project','PIITRAM 2023 - periodic-table game'],
+          ['Outstanding Scout of the Year','goal','Scout Malaysia - Troop Leader']]],
+ ['2024',[['Entered Universiti Malaya','learning','B.Eng Mechanical Engineering (Sep)'],
+          ['EV Battery Pack','project','2nd Runner-Up - Bimage x IMechE UM PDMC']]],
+ ['2025',[['Founded Icy Production','creative','Photo/video business'],
+          ['PalletEye','project','Champion - CREST 2025 & i-UM Disrupt 2025'],
+          ['Robocon 2025','project','Mechanical Team'],
+          ['Smart City Bot','project','Smart City Solution Competition (IMechE UM)'],
+          ['Exec - ESUM & REC','org','Engineering societies']]],
+ ['2026',[['President - Photojam','creative','Youth wing leadership'],
+          ['Secretary - UM Makers Club','org','Makerspace@UM, ARC: RoboSurvivor'],
+          ['"Harmonious Malaysia" book','creative','Released Mar - ISBN, National Library, RM30k+'],
+          ['EV Eye','project','ESUM x RExharge - full-stack AI'],
+          ['VibeFit','project','vibefit.my - sole developer'],
+          ['Kuayue single released','creative','On music platforms']]],
+ ['Ongoing',[['Mechanical Engineering @ UM','learning','Year 2 - CGPA 3.47'],
+             ['ACCA FIA','learning','5 of 7 papers'],['CSWA certified','identity','SOLIDWORKS Associate']]],
+];
+document.getElementById('tl').innerHTML=TL.map(([yr,items])=>
+ `<div class="yr"><div class="ybadge">${yr}</div><div class="ydot"></div>
+   <div class="cards">${items.map(([t,ty,sub])=>{const c=TYPES[ty][1];
+     return `<div class="mc" style="border-left-color:${c}"><h4>${t}</h4>`+
+            (sub?`<div class="t ${ty==='goal'||ty==='identity'?'award':''}">${sub}</div>`:'')+`</div>`;}).join('')}</div></div>`).join('');
+
+// ---- tabs
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
+  const g=t.dataset.v==='graph';
+  document.getElementById('graphView').style.display=g?'block':'none';
+  document.getElementById('timelineView').style.display=g?'none':'block';
+  if(g){resize();}
+});
+
+resize();loop();
+</script>
+</body>
+</html>

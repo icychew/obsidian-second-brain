@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icy Chew Hao Yang - Second Brain</title>
+<style>
+  :root{--bg:#0b0f1c;--card:#161d34;--card2:#1e2742;--ink:#e8edf7;--muted:#94a0c0;--line:#28324f;--a1:#4f8cff;--a2:#8a5cff;--a3:#2dd4bf;--gold:#f7b955}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,Arial,sans-serif;color:var(--ink);line-height:1.55;min-height:100vh;
+    background:radial-gradient(1100px 640px at 82% -12%,#1b2547 0,transparent 58%),radial-gradient(900px 560px at -10% 5%,#17203a 0,transparent 52%),var(--bg);
+    padding:56px 20px 70px}
+  .wrap{max-width:840px;margin:0 auto}
+  .eyebrow{color:var(--a3);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;margin-bottom:8px}
+  h1{font-size:clamp(30px,6vw,46px);font-weight:800;letter-spacing:.3px;
+     background:linear-gradient(90deg,var(--a1),var(--a3),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tag{color:var(--muted);font-size:clamp(15px,2.4vw,18px);margin-top:6px}
+  .summary{margin:20px 0 8px;font-size:15.5px;color:#cdd7ee;max-width:680px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;color:var(--muted)}
+  .chip b{color:var(--gold)}
+  .cards{display:grid;gap:16px;grid-template-columns:1fr;margin:30px 0 24px}
+  @media(min-width:600px){.cards{grid-template-columns:1fr 1fr}}
+  a.card{display:block;text-decoration:none;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:18px;padding:22px;transition:.18s;color:var(--ink);position:relative;overflow:hidden}
+  a.card:hover{transform:translateY(-3px);border-color:#3b5bd0}
+  a.card::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--a1),var(--a2))}
+  a.card .ico{font-size:26px}
+  a.card h3{font-size:19px;margin:8px 0 4px}
+  a.card p{color:var(--muted);font-size:13.5px}
+  .contact{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;font-size:14px}
+  .contact a{color:var(--a1);text-decoration:none}
+  footer{margin-top:34px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Interactive portfolio</div>
+  <h1>Icy Chew Hao Yang</h1>
+  <div class="tag">Mechanical Engineering &middot; Robotics &middot; Applied AI</div>
+
+  <p class="summary">Year 2 Mechanical Engineering undergraduate at Universiti Malaya and Certified SOLIDWORKS Associate. I design in SOLIDWORKS and Fusion 360 and build award-winning EV, robotics, and computer-vision systems - and I lead student engineering societies. This is an interactive view of my work, mapped from my AI-first second brain.</p>
+
+  <div class="chips">
+    <span class="chip"><b>CGPA 3.47</b> &middot; Matric 4.00 &middot; SPM 10A1B</span>
+    <span class="chip"><b>CSWA</b> certified</span>
+    <span class="chip"><b>Champion</b> - CREST 2025 &amp; i-UM Disrupt</span>
+    <span class="chip"><b>2nd Runner-Up</b> - Bimage x IMechE UM PDMC</span>
+    <span class="chip"><b>President</b> - Photojam</span>
+    <span class="chip"><b>Secretary</b> - UM Makers Club</span>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="skills.html">
+      <div class="ico">&#128200;</div>
+      <h3>Skills Map</h3>
+      <p>A radar of my skill domains, proficiency by category, and the projects that prove each one.</p>
+    </a>
+    <a class="card" href="brain.html">
+      <div class="ico">&#127760;</div>
+      <h3>Brain Map</h3>
+      <p>An interactive knowledge graph of my projects, teams, and learning - plus a full project timeline.</p>
+    </a>
+  </div>
+
+  <div class="contact">
+    <a href="mailto:haoyangchew2005@gmail.com">haoyangchew2005@gmail.com</a>
+    <a href="https://www.linkedin.com/in/icy-chew-hao-yang-007162288/" target="_blank">LinkedIn</a>
+    <a href="https://vibefit.my/" target="_blank">VibeFit (vibefit.my)</a>
+  </div>
+
+  <footer>Built and maintained with an Obsidian + Claude "second brain". Engineering, robotics, and AI projects mapped as a living system.</footer>
+</div>
+</body>
+</html>
